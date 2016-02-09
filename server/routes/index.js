@@ -1,11 +1,9 @@
 "use strict";
 
-const indexRouter = require("express").Router();
-
-indexRouter.get("/", (req, res, next) => {
-  res.render("index");
-});
+const apiRouter = require("./api");
+const indexRouter = require("./home");
 
 module.exports = {
-  indexRouter
+  indexRouter,
+  apiRouter
 };
