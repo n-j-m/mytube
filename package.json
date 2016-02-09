@@ -1,0 +1,25 @@
+{
+  "name": "mytube",
+  "version": "1.0.0",
+  "description": "My own youtube",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production nodemon ./bin/www",
+    "dev": "cross-env DEBUG=mytube: nodemon ./bin/www"
+  },
+  "author": "n-j-m (https://github.com/n-j-m)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "bookshelf": "^0.9.1",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "knex": "^0.9.0",
+    "morgan": "^1.6.1",
+    "sqlite3": "^3.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^1.0.7",
+    "nodemon": "^1.8.1"
+  }
+}

@@ -1,0 +1,8 @@
+#! /env/node
+"use strict";
+
+const app = require("../server");
+
+const port = app.get("port") || 3000;
+
+app.listen(port, () => console.log("app listening on port", port));
