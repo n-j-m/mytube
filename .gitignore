@@ -34,3 +34,6 @@ node_modules
 
 # data
 data/*.sqlite3
+
+#environment
+.env

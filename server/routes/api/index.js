@@ -4,8 +4,9 @@ const apiRouter = require("express").Router();
 
 const usersRouter = require("./users");
 const videosRouter = require("./videos");
+const authRouter = require("./auth");
 
-apiRouter.use("/api", usersRouter, videosRouter);
+apiRouter.use("/api", authRouter, usersRouter, videosRouter);
 
 apiRouter.use("/api", (req, res) => {
   res.status(404).json({
