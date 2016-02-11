@@ -5,6 +5,7 @@ const tableDef = (t) => {
   t.integer("user_id").references("id").inTable("user");
   t.string("title");
   t.string("description");
+  t.string("path");
   t.timestamps();
 };
 

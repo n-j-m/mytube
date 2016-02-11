@@ -14,7 +14,6 @@ usersRoute
       .catch(next);
   })
   .post((req, res, next) => {
-    console.log("body:", req.body);
     User.forge(req.body).save()
       .then(user => res.json(user))
       .catch(next);
@@ -46,17 +45,6 @@ userVideosRoute
     })
       .then(user => user.related("videos"))
       .then(videos => res.json(videos))
-      .catch(next);
-  })
-  .post((req, res, next) => {
-    User.forge({id: req.params.id}).fetch({
-      withRelated: ["videos"]
-    })
-      .then(user => {
-        const videos = user.related("videos");
-        return videos.create(req.body);
-      })
-      .then(video => res.json(video))
       .catch(next);
   });
 
