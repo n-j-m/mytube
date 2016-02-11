@@ -1,6 +1,10 @@
 {
   "ignore": [
     "public",
-    "data"
+    "data",
+    "client"
+  ],
+  "watch": [
+    "server"
   ]
 }
